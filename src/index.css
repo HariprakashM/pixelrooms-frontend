@@ -209,7 +209,7 @@ margin-bottom: 10px !important;
     padding: 30px 40px;
 }
 .register-background{
-  background-image: url("https://cdn.wallpapersafari.com/90/60/HPfrKl.png") !important;
+  background-image: url("./asserts/night.png") !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -228,7 +228,7 @@ margin-bottom: 10px !important;
   box-shadow: 0px 2px 50px 15px #2F3C4B;
 }
 .login-background{
-  background-image: url("https://cdn.wallpapersafari.com/23/30/IpcZNP.jpg");
+  background-image: url("./asserts/day.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
