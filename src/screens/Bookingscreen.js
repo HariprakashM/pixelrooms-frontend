@@ -31,7 +31,7 @@ function Bookingscreen({ match }) {
 
   useEffect(() => {
     if(!localStorage.getItem('user')){
-        Swal.fire('Oops' , 'Login before Booking Room' , 'error').then(result=>{
+        Swal.fire('Oops' , 'Login, before Booking Room' , 'error').then(result=>{
             window.location.href='/login'})
         
     }
