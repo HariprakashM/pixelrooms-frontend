@@ -39,7 +39,9 @@ function Bookingscreen({ match }) {
     if(!localStorage.getItem('user')){
       window.location.reload='/login'
     }
+    
     try {
+      
       setloading(true);
       const data = (
         await axios.post(`${config.api}/api/rooms/getroombyid`, {
@@ -57,6 +59,8 @@ function Bookingscreen({ match }) {
   }, []);
 
   async function onToken(token) {
+    
+    
     console.log(token);
     const bookingDetails = {
       room,
@@ -68,6 +72,7 @@ function Bookingscreen({ match }) {
       token
     };
     try {
+      
       setloading(true);
       const result = await axios.post(`${config.api}/api/bookings/bookroom`, bookingDetails);
       setloading(false);
@@ -83,12 +88,15 @@ function Bookingscreen({ match }) {
 }
 
   return (
-    <div className="m-5" data-aos="flip-up">
+    <>
+    
+    <div className="mx-5 my-2" data-aos="flip-up">
+      
       {loading ? (
         <Loader />
       ) : room ? (
         <div>
-          <div className="row justify-content-center mt-5 bs">
+          <div className="row justify-content-center m-1 bs">
             <div className="col-md-6">
               <h1>{room.name}</h1>
               <img src={room.imageurls[0]} className="bigimg" />
@@ -125,6 +133,7 @@ function Bookingscreen({ match }) {
                   currency='INR'
                 >
                   <button className="btn btn-primary paynow">Pay Now</button>
+                  <marquee style={{fontSize:"20px"}}>Payment Details:Card.no=4242 4242 4242 4242</marquee>
                 </StripeCheckout>
               </div>
             </div>
@@ -134,6 +143,7 @@ function Bookingscreen({ match }) {
         <Error />
       )}
     </div>
+    </>
   );
 }
 

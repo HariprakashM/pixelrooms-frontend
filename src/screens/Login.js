@@ -47,9 +47,16 @@ function Login() {
                     <input type='text' className='form-control' placeholder='Password' value={password} onChange={(e)=>{setpassword(e.target.value)}}/>
                     
                 <button className='btn btn-log mt-3' onClick={login}>Login</button>
+                
+                </div>
+                <div className="text-center">
+                <span>User-Email:user@gmail.com</span><br/>
+                <span>User-Admin:admin@gmail.com</span><br/>
+                <span>Password:123</span>
                 </div>
             </div>
         </div>
+        
     </div>
   )
   
